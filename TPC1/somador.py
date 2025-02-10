@@ -10,7 +10,8 @@ def somador(texto: str):
 
     while i < len(texto):
         if texto[i] == "=":
-            break
+            print(f"{sum}")
+            i += 1
         
         elif comportamento:
             if texto[i] == "o" and texto[i:i+3] == "off":
@@ -29,13 +30,12 @@ def somador(texto: str):
             i += 2
         else:
             i += 1
-        
-    return sum
-
 
 def main():
-    text = "123on12offl=do32on13="
-    print(somador(text))
+    with open("input.txt") as f:
+        text = f.read()
+
+    somador(text)
     
 if __name__ == "__main__":
     main()
