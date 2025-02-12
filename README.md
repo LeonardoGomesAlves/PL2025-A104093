@@ -15,7 +15,7 @@ Ano Letivo 2024/2025
 
 ## Tarefas
 <ul>
-  <li>TPC1 - XXX</li>
+  <li>[TPC1](https://github.com/LeonardoGomesAlves/PL2025-A104093/tree/main/TPC1)</li>
   <li>TPC2 - XXX</li>
   <li>TPC3 - XXX</li>
   <li>TPC4 - XXX</li>
