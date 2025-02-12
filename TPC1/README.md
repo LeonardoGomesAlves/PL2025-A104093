@@ -20,7 +20,9 @@
 ### Interpretação do problema
 
 Dado o problema, considerei que o comportamento da soma iniciaria desligado, desta forma, para que os números começem a ser somados é necessário aparecer a string "On".
+
 Sempre que aparece a string "Off", o comportamento da soma é desligado, ou seja, os próximos números que aparecerem imediatamente, que não precedam a string "On", não serão somados.
+
 Quando aparecer o caráter "=", o valor da soma nesse momento é escrito no ecrã.
 
 ### Exemplo
@@ -45,3 +47,13 @@ python3 somador.py input.txt
 
 **input.txt** - ficheiro que possuirá o texto;
 
+### Implementação
+O programa desenvolvido, **somador.py**, implementa o somador baseado na minha interpretação do problema.
+
+Para tal, utilizei as seguintes variáveis:
+- **i** - indíce do loop que percorre a string;
+- **sum** - acumula a soma dos valores encontrados;
+- **val** - variável temporário que auxilia a construir os números encontrados no texto;
+- **comportamento** - variável booleana que indica se o comportamento da soma está ativado ou desativado.
+
+Assim, quando aparece, por exemplo, a string "On" no texto, a variável **comportamento** é alterada para **True** e os valores que aparecerem daí em diante, enquanto não aparecer a string "Off", são calculados em **val** (auxilia a construção em números com mais do que um dígito) e adiciona-o na variável **sum**. Assim, quando aparecer o caráter "=",  o valor em **sum** é apresentado no terminal do utilizador. 
