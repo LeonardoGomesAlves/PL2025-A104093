@@ -25,6 +25,9 @@ def somador(texto: str):
                 sum += val
                 val = 0
 
+            else: 
+                i += 1
+
         elif texto[i] == "o" and texto[i:i+2] == "on":
             comportamento = True
             i += 2
@@ -32,10 +35,12 @@ def somador(texto: str):
             i += 1
 
 def main():
-    with open("input.txt") as f:
+    file = sys.argv[1]
+
+    with open(file) as f:
         text = f.read()
 
     somador(text)
     
-if __name__ == "__main__":
-    main()
+
+main()
