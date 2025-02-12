@@ -40,7 +40,7 @@ Quando aparecer o caráter "=", o valor da soma nesse momento é escrito no ecr�
 479
 ```
 
-### Exemplo da compilação do programa:
+### Exemplo da compilação do programa
 <pre>
 python3 somador.py input.txt
 </pre>
