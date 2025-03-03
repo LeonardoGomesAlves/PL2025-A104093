@@ -47,4 +47,4 @@ A implementação foi feita no ficheiro <a href="https://github.com/LeonardoGome
 
 ## Conclusão
 
-Por fim, o programa desenvolvido fazer o parsing das linhas csv, utilizando expressões regulares, que nos permitem assim, executar as queries propostas no enunciado do trabalho.
+Por fim, o programa desenvolvido faz o parsing das linhas csv, utilizando expressões regulares, que nos permitem assim, executar as queries propostas no enunciado do trabalho.
