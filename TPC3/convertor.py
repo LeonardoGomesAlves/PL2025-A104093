@@ -11,10 +11,10 @@ def cabecalho_regex(linha):
     return linha
 
 def bold_regex(linha):
-    return re.sub(r"\*\*([^\s].*?)\*\*", f"<b>\1</b>", linha)
+    return re.sub(r"\*\*([^\s].*?)\*\*", r"<b>\1</b>", linha)
 
 def italico_regex(linha):
-    return re.sub(r"\*([^\s].*?)\*", f"<i>\1</i>", linha)
+    return re.sub(r"\*([^\s].*?)\*", r"<i>\1</i>", linha)
 
 def lista_numerada_regex(linha):
     pass
@@ -25,24 +25,51 @@ def url_regex(linha):
 def image_regex(linha):
     return re.sub(r"!\[(.*)\]\((.*)\)", r'<img src="\2" alt="\1"/>', linha)
 
-def convertor(file):
-    texto = ""
+def lista_numerada_regex(linhas):
+    list_regex = r"^(\d+)\.\s([^\n]*)"
+    resultado = []
+    inside_list = False
+
+    for linha in linhas:
+        if re.match(list_regex, linha):
+            if not inside_list:
+                resultado.append("<ol>")
+                inside_list = True
+            resultado.append(re.sub(list_regex, r'<li>\2</li>', linha))
+        else:
+            if inside_list:
+                resultado.append("</ol>")
+                inside_list = False
+            resultado.append(linha)
+
+    if inside_list:
+        resultado.append("</ol>")
+
+    return resultado
+                
+
+
+def convertor(file: str):
+    html = ""
     with open(file, "r", encoding="utf-8") as f:
-        texto = f.read()
+        texto = f.read().split('\n')
 
-    lines = texto.split('\n')
+    lines = lista_numerada_regex(texto)
 
-    for linha in lines:
-        linha = cabecalho_regex(linha)
-        linha = bold_regex(linha)
-        linha = italico_regex(linha)
-        linha = image_regex(linha)
-        linha = url_regex(linha)
+    for i in range(len(lines)):
+        lines[i] = cabecalho_regex(lines[i])
+        lines[i] = bold_regex(lines[i])
+        lines[i] = italico_regex(lines[i])
+        lines[i] = image_regex(lines[i])
+        lines[i] = url_regex(lines[i])
         
-        print(linha)
-        
+        html = "\n".join(lines)
 
-
+    file_name = file.split('.')
+    with open(file_name[0] + ".html", "w", encoding="utf-8") as w:
+        w.write(html)
+    
+# Usage: python3 convertor.py <file.md>
 def main(args):
     if len(args) > 1:
         convertor(args[1])
