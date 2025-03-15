@@ -1,0 +1,50 @@
+[
+    {
+        "cod": "A11",
+        "nome": "água 0.5L",
+        "quant": 0,
+        "preco": 0.7
+    },
+    {
+        "cod": "A12",
+        "nome": "Coca Cola 350ml",
+        "quant": 4,
+        "preco": 1.2
+    },
+    {
+        "cod": "A13",
+        "nome": "Batatas Fritas 50g",
+        "quant": 10,
+        "preco": 1.5
+    },
+    {
+        "cod": "A14",
+        "nome": "Chocolate 100g",
+        "quant": 7,
+        "preco": 2.0
+    },
+    {
+        "cod": "A15",
+        "nome": "Waffer",
+        "quant": 6,
+        "preco": 1.0
+    },
+    {
+        "cod": "A16",
+        "nome": "Café Expresso",
+        "quant": 12,
+        "preco": 1.5
+    },
+    {
+        "cod": "A17",
+        "nome": "Sumo de Laranja 300ml",
+        "quant": 4,
+        "preco": 1.8
+    },
+    {
+        "cod": "A18",
+        "nome": "Lanche Misto",
+        "quant": 3,
+        "preco": 1.0
+    }
+]
