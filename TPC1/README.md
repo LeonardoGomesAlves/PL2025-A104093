@@ -1,7 +1,7 @@
 # TPC1 - Somador on/off
 
 ## Data de realização
-12/02/2024
+12/02/2025
 
 ## Autor
 **Nome:** Leonardo Gomes Alves - A104093
