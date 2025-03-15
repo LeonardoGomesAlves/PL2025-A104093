@@ -16,9 +16,6 @@ def bold_regex(linha):
 def italico_regex(linha):
     return re.sub(r"\*([^\s].*?)\*", r"<i>\1</i>", linha)
 
-def lista_numerada_regex(linha):
-    pass
-
 def url_regex(linha):
     return re.sub(r"\[(.*)\]\((.*)\)", r'<a href="\2">\1</a>', linha) 
 
