@@ -20,7 +20,4 @@ Ano Letivo 2024/2025
   <li><a href="https://github.com/LeonardoGomesAlves/PL2025-A104093/tree/main/TPC3">TPC3</a></li>
   <li><a href="https://github.com/LeonardoGomesAlves/PL2025-A104093/tree/main/TPC4">TPC4</a></li>
   <li><a href="https://github.com/LeonardoGomesAlves/PL2025-A104093/tree/main/TPC5">TPC5</a></li>
-  <li>TPC6 - XXX</li>
-  <li>TPC7 - XXX</li>
-  <li>TPC8 - XXX</li>
 </ul>
